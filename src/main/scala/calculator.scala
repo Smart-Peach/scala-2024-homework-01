@@ -1,6 +1,6 @@
 import scala.util.boundary, boundary.break
 
-def calculator(commands: String*): Unit = {
+@main def calculator(commands: String*): Unit = {
   var acc: Int = 0
   var A: Int = 0
   var B: Int = 0

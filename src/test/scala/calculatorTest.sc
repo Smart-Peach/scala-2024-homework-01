@@ -1,0 +1,16 @@
+assert(calculator("20", "22", "+") == 42)
+assert(calculator("20", "22", "-") == 2)
+assert(calculator("20", "20", "*") == 400)
+assert(calculator("200", "10", "/") == 20)
+assert(calculator("200", "0", "/") == 0)
+assert(calculator("22", "20", "swap", "-") == -2)
+assert(calculator("20", "0", "*") == 0)
+assert(calculator("20", "20", "+", "acc", "2", "/") == 20)
+assert(calculator("20", "20", "+", "acc", "2", "+") == 42)
+assert(calculator("blink", "1", "-") == -1)
+
+assert(calculator("break", "1", "2", "+", "3", "4", "+") == 0)
+assert(calculator("1", "2", "+", "break", "acc","0", "/") == 3)
+
+assert(calculator("20", "20", "+", "acc", "2", "/") == 20)
+assert(calculator("20", "21", "1", "+") == 22)
