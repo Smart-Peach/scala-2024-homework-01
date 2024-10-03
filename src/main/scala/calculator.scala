@@ -1,6 +1,6 @@
 import scala.util.boundary, boundary.break
 
-@main def calculator(commands: String*): Unit = {
+@main def calculator(commands: String*): Int = {
   var acc: Int = 0
   var A: Int = 0
   var B: Int = 0
@@ -28,7 +28,15 @@ import scala.util.boundary, boundary.break
 
   def mult(): Unit = { acc = A * B }
 
-  def div(): Unit = { acc = A / B }
+  def div(): Unit = {
+    if (B == 0) {
+      A = 0
+      B = 0
+      acc = 0
+    } else {
+      acc = A / B
+    }
+  }
 
   def swap(): Unit = {
     val tmp = A
@@ -63,4 +71,5 @@ import scala.util.boundary, boundary.break
     }
   }
   println(acc)
+  acc
 }
